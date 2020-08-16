@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@null">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/empty_no_connection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@mipmap/no_internet" />
+
+                        <TextView
+                            android:id="@+id/empty_list_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="@string/network_error"
+                            android:textColor="@color/color_app_player_black"
+                            android:textSize="20sp"
+                            />
+
+
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/empty_no_books"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:alpha="0"-->
+<!--                        android:background="@null"-->
+<!--                        android:orientation="vertical"-->
+<!--                        tools:alpha="0">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/empty_iv"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:background="@drawable/no_books_ip" />-->
+
+<!--                        <com.innovolve.iqraaly.customviews.IqraalyTextView-->
+<!--                            android:id="@+id/empty_tv"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="20dp"-->
+<!--                            android:background="@null"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="@string/no_cat"-->
+<!--                            android:textColor="@color/color_app_player_black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:text_font="@string/font_cairo_regular" />-->
+<!--                    </LinearLayout>-->
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:clipToPadding="false"
+                    android:layoutAnimation="@anim/layout_animation_fall_down"
+                    />
+            </FrameLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
+

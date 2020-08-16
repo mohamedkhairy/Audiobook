@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/book_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/home_fragments_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+
+                    <!-- Content description for this item is set programmatically-->
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/about_play_book"
+                            android:layout_width="110dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="5dp"
+                            android:layout_gravity="center"
+                            app:cardElevation="0dp"
+                            android:background="@null"
+                            app:cardMaxElevation="0dp"
+                            tools:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/about_book_cover"
+                                android:layout_width="110dp"
+                                android:layout_height="160dp"
+                                android:layout_gravity="center"
+                                android:scaleType="centerCrop"
+                                tools:src="@tools:sample/backgrounds/scenic"/>
+
+                            <ImageView
+                                android:id="@+id/about_play_episode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:srcCompat="@android:drawable/ic_media_play" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/root"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="4dp"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/book_title_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="@string/book_title"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp"
+                                tools:text="@string/book_title" />
+
+                            <TextView
+                                android:id="@+id/author_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="@string/author"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp"
+                                tools:text="@string/author" />
+
+                            <TextView
+                                android:id="@+id/genres_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="@string/genres"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp"
+                                tools:text="@string/genres" />
+
+
+                            <TextView
+                                android:id="@+id/book_duration_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="@string/book_duration"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp"
+                                tools:text="@string/book_duration"  />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/book_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="Modern"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/author"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="Joseph"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/genres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="Medical"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/duration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:text="1:52:06"
+                                android:textColor="@color/gray_paynes"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+                    <FrameLayout
+                        android:id="@+id/playbookfram"
+                        android:layout_width="150dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/gray_paynes">
+
+                        <TextView
+                            android:id="@+id/playbook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="16dp"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:text="@string/about_play_book"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center"
+                            android:clickable="false"
+                            app:srcCompat="@android:drawable/ic_media_play" />
+
+                    </FrameLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/about_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/book_description"
+                    android:textColor="@color/gray_paynes"
+                    android:textSize="14sp" />
+
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="12sp"
+                    app:colorClickableText="@color/colorAccent"
+                    app:trimCollapsedText="@string/more"
+                    app:trimExpandedText="@string/less"
+                    app:trimMode="trimModeLength"
+                    tools:text="About Book" />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/related_books_loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:alpha="0" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/chapters_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

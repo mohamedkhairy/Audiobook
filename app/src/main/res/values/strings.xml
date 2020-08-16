@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Audiobook</string>
+    <string name="network_error">Check Network Connection</string>
+    <string name="author">Author : </string>
+    <string name="book_title">Title : </string>
+    <string name="genres">Genres : </string>
+    <string name="book_duration">Duration : </string>
+    <string name="book_description">Description</string>
+    <string name="about_play_book">Play Book</string>
+    <string name="more">More</string>
+    <string name="less">Less</string>
+    <string name="notification_play">play</string>
+    <string name="notification_pause">pause</string>
+    <string name="notification_channel">Now Playing</string>
+    <string name="notification_channel_description">Shows now playing description</string>
+
+</resources>
